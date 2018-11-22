@@ -46,7 +46,7 @@ i,em{
 
 .clearfix {
     zoom: 1;
-    &::after {
+    &:after {
         content: '';
         display: block;
         clear: both;
