@@ -1,0 +1,15 @@
+安装ruby:  Ruby 的官网（http://rubyinstaller.org/downloads）
+安装sass: 	打开命令终端，输入：gem install sass
+
+1.编译scss文件为css文件
+	运行命令：sass --style compressed test.scss test.css，即可生成压缩版的css文件，并且命名为test.css。
+	开发过程中，只需要修改scss文件，然后编译；前端页面只需要引用相应的css文件即可
+	
+2.侦听文件和文件夹
+	如果希望某一个scss文件或者相应的文件夹下面文件修改后，自动进行编译，那么可以使用侦听命令。
+	1> 侦听文件：
+		sass --watch --style compressed test.scss:test.css; 
+		当test.scss文件有修改后，会自动编译为test.css，并且是compressed的。
+	2> 侦听文件夹：
+		sass --watch --style compressed sass:css
+		当sass文件夹下.scss文件有修改的时候，会自动编译为与sass中文件同名的css文件。
